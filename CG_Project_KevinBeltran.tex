@@ -21,7 +21,7 @@
     \vspace{1em}
     Kevin Beltran \\
     CSC 570: Computational Geometry \\
-    \today
+    March 16, 2026
 \end{center}
 
 \section{Introduction}
@@ -68,7 +68,7 @@ To evaluate the practical behavior of Douglas-Peucker and Visvalingam-Whyatt acr
 \begin{itemize}
     \item \textbf{Mechanical (SLO County):} Two curated trail files (\texttt{County\_Trails.geojson}, \texttt{Proposed\_Trails.geojson}) \cite{slo_gis_hub} plus four Overpass Turbo tiles exported from San Luis Obispo County \cite{overpass_turbo}.
     \item \textbf{Organic (California boundary data):} California county boundary GeoJSON \cite{ca_open_data}, used for medium-scale organic curves and one aggregated large organic stress-test curve.
-    \item \textbf{Edge case:} A synthetic noisy-line dataset (Gaussian perturbation of a baseline straight polyline) for controlled high-frequency noise behavior.
+    \item \textbf{Synthetic control edge case:} A Gaussian-noise perturbation of a baseline straight polyline, used as a controlled stress case for high-frequency jitter behavior and visual comparison (Plot C), rather than as a primary sourced dataset.
 \end{itemize}
 \end{sloppypar}
 
@@ -85,6 +85,7 @@ After preprocessing, the benchmark corpus contains 200 total features:
     \item \textbf{Mechanical:} 141 features
     \item \textbf{Organic:} 59 features
 \end{itemize}
+The synthetic Gaussian edge-case curve is handled separately as a control example and is not included in these source-data feature counts.
 
 \begin{table}[H]
 \centering
@@ -160,9 +161,10 @@ The implementation is organized into reusable modules:
 \end{itemize}
 
 \subsection{Code Repository}
-Project source code and reproducibility scripts are available at:  
-\texttt{[REPO\_URL\_PLACEHOLDER]}  
-Replace this placeholder with the final GitHub repository URL before submission.
+\begin{itemize}
+    \item Project source code and reproducibility scripts are available at:
+    \item \url{https://github.com/KevinBeltran23/Computational_Geometry_Project}
+\end{itemize}
 
 \subsection{Douglas-Peucker Implementation}
 The implemented DP variant follows the original distance-threshold principle \cite{dp1973,ramer1972}, but uses an \textbf{iterative stack-based split process} instead of recursive Python calls to avoid recursion-depth issues on large curves.
@@ -199,6 +201,7 @@ The results in this section come from the merged benchmark pack produced by the 
     \item \textbf{VW runs:} 116
 \end{itemize}
 Compression targets used in this pack are \{0.3, 0.5, 0.7, 0.9\}, with subsets drawn from Mechanical/Organic and Small/Medium/Large bins.
+The synthetic Gaussian edge-case is discussed as a controlled illustrative case, but it is not part of this aggregated benchmark pack table.
 
 \begin{table}[H]
 \centering
