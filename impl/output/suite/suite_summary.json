@@ -1,0 +1,82 @@
+{
+  "Mechanical_large_DP": {
+    "n_runs": 4,
+    "mean_runtime_ms": 39284.56346024177,
+    "median_runtime_ms": 40517.900838982314,
+    "mean_max_perp_error": 0.04220950189057034,
+    "mean_hausdorff": 0.06540159936128537,
+    "mean_achieved_compression": 0.8096973482643057
+  },
+  "Mechanical_large_VW": {
+    "n_runs": 4,
+    "mean_runtime_ms": 3820.319132268196,
+    "median_runtime_ms": 4240.656353009399,
+    "mean_max_perp_error": 0.04108683242612894,
+    "mean_hausdorff": 0.06425872822713852,
+    "mean_achieved_compression": 0.7999984395399762
+  },
+  "Mechanical_medium_DP": {
+    "n_runs": 48,
+    "mean_runtime_ms": 1196.6226585379143,
+    "median_runtime_ms": 1144.51959496364,
+    "mean_max_perp_error": 0.0012611338536910835,
+    "mean_hausdorff": 0.008189811909322105,
+    "mean_achieved_compression": 0.8324377045431431
+  },
+  "Mechanical_medium_VW": {
+    "n_runs": 48,
+    "mean_runtime_ms": 115.71378662605032,
+    "median_runtime_ms": 102.78260096674785,
+    "mean_max_perp_error": 0.0012683338191750093,
+    "mean_hausdorff": 0.005965490520020128,
+    "mean_achieved_compression": 0.7249737516181652
+  },
+  "Mechanical_small_DP": {
+    "n_runs": 160,
+    "mean_runtime_ms": 3.177635588872363,
+    "median_runtime_ms": 0.2294000005349517,
+    "mean_max_perp_error": 0.000440534320882158,
+    "mean_hausdorff": 0.001959521690004895,
+    "mean_achieved_compression": 0.436984981009938
+  },
+  "Mechanical_small_VW": {
+    "n_runs": 160,
+    "mean_runtime_ms": 0.26768187490233686,
+    "median_runtime_ms": 0.039199949242174625,
+    "mean_max_perp_error": 0.000494405908563844,
+    "mean_hausdorff": 0.001805168908469043,
+    "mean_achieved_compression": 0.43483550830419115
+  },
+  "Organic_large_DP": {
+    "n_runs": 2,
+    "mean_runtime_ms": 51204.791253985604,
+    "median_runtime_ms": 53605.15518998727,
+    "mean_max_perp_error": 57491.81410712467,
+    "mean_hausdorff": 100567.09447938015,
+    "mean_achieved_compression": 0.92628831239031
+  },
+  "Organic_large_VW": {
+    "n_runs": 2,
+    "mean_runtime_ms": 6430.245076015126,
+    "median_runtime_ms": 7119.514790014364,
+    "mean_max_perp_error": 20186.741620643214,
+    "mean_hausdorff": 52157.55628160252,
+    "mean_achieved_compression": 0.799997263095234
+  },
+  "Organic_medium_DP": {
+    "n_runs": 88,
+    "mean_runtime_ms": 582.2010662754606,
+    "median_runtime_ms": 529.4350009644404,
+    "mean_max_perp_error": 103.9203666866185,
+    "mean_hausdorff": 13881.164450480643,
+    "mean_achieved_compression": 0.7884618579586121
+  },
+  "Organic_medium_VW": {
+    "n_runs": 88,
+    "mean_runtime_ms": 63.700028589334,
+    "median_runtime_ms": 53.848901006858796,
+    "mean_max_perp_error": 200.18666476538877,
+    "mean_hausdorff": 5048.380743881708,
+    "mean_achieved_compression": 0.7249461281133192
+  }
+}

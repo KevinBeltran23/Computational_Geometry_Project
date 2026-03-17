@@ -1,0 +1,5 @@
+curve_id,category,source,size_bin,algorithm,compression_target,original_vertices,simplified_vertices,achieved_compression,max_perp_error,hausdorff,runtime_ms
+Lake,Organic,California_Counties_68233851330457591.geojson,medium,DP,0.9,5178,518,0.8999613750482812,67.87292935143236,6788.220098160324,1634.2810060014017
+Lake,Organic,California_Counties_68233851330457591.geojson,medium,VW,0.9,5178,518,0.8999613750482812,205.03790749904866,6788.220098160324,52.79790097847581
+Napa,Organic,California_Counties_68233851330457591.geojson,medium,DP,0.9,15520,1552,0.9,4463.944681633799,11776.530450444376,5381.826444005128
+Napa,Organic,California_Counties_68233851330457591.geojson,medium,VW,0.9,15520,1552,0.9,175.5090221729367,6962.448063349728,215.97540198126808

@@ -1,0 +1,340 @@
+\documentclass[12pt]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,setspace}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{booktabs} % For professional tables
+\usepackage[margin=1in]{geometry} % Standard 1-inch margins
+
+\setstretch{1.1} % Slightly better readability
+
+\begin{document}
+
+% --- Title Section ---
+\begin{center}
+    \vspace*{1em}
+    \textbf{\Large Experimental Comparison of Visvalingam-Whyatt and \\ Douglas-Peucker Line Simplification} \\
+    \vspace{1em}
+    Kevin Beltran \\
+    CSC 570: Computational Geometry \\
+    \today
+\end{center}
+
+\section{Introduction}
+Modern maps, GPS logs, and boundary datasets are often represented as \emph{polylines}: ordered lists of 2D points (vertices) connected by line segments. As datasets grow, these polylines can contain thousands to hundreds of thousands of vertices, which increases storage, transmission cost, and rendering time. Polyline simplification addresses this by removing vertices while preserving the essential shape of the original curve.
+
+The central challenge is not only to reduce point count, but to do so without destroying geometric structure. In practical terms, a simplification method should keep important bends and turns while removing redundant detail. This project studies that balance through an experimental comparison of two classical methods: Douglas-Peucker (DP) and Visvalingam-Whyatt (VW).
+
+\subsection{Background and Problem Setting}
+This report is designed to be self-contained for readers with basic mathematical and programming background. The key concepts used throughout are:
+\begin{itemize}
+    \item \textbf{Vertex count:} Number of points in a polyline.
+    \item \textbf{Compression ratio:} Fraction of vertices removed after simplification.
+    \item \textbf{Geometric error:} How far the simplified curve deviates from the original (measured here by maximum perpendicular distance and Hausdorff distance).
+    \item \textbf{Mechanical vs Organic geometry:}  
+    Mechanical curves are human-constrained paths (e.g., curated/proposed trail networks), while Organic curves are irregular natural boundaries (e.g., county/coastline-like boundaries). This is a comparative label used for experimentation, not an absolute taxonomy.
+\end{itemize}
+
+The experimental question is: \emph{How do DP and VW differ in accuracy, compression behavior, and runtime across geometry classes and scale regimes?}  
+To answer this, the project evaluates both algorithms over small, medium, and large subsets with reproducible scripts and standardized metrics.
+
+\subsection{Scope and Contributions}
+The main contributions of this project are:
+\begin{itemize}
+    \item A reproducible data-preparation pipeline for SLO mechanical trails and California organic boundary data.
+    \item A modular implementation of DP and VW with consistent evaluation infrastructure.
+    \item A comparative benchmark suite across category and scale, with plots for compression-error and runtime analysis.
+\end{itemize}
+
+\section{Algorithm Descriptions}
+
+\subsection{Douglas-Peucker (DP)}
+The Douglas-Peucker algorithm, introduced in 1973 \cite{dp1973}, is a top-down strategy that uses perpendicular distance as its primary threshold for simplification. A closely related independent publication by Ramer in 1972 \cite{ramer1972} describes the same geometric split criterion; in this report we use the name \emph{Douglas-Peucker} consistently for the implemented method. The algorithm begins by defining a line segment between the first and last points of a curve. It then identifies the intermediate point with the maximum perpendicular distance from this segment. If this maximum distance exceeds a user-defined threshold $\epsilon$, the point is preserved, and the algorithm processes the two resulting sub-segments. In this project, the split logic is implemented with an iterative stack (rather than language-level recursion) for robustness on large inputs. Despite its shape-preserving accuracy, DP is prone to ``spiking'' artifacts and potential self-intersections during extreme simplification.
+
+\subsection{Visvalingam-Whyatt (VW)}
+In contrast to the distance-based logic of DP, the Visvalingam-Whyatt algorithm (1992) \cite{vw1992} employs a bottom-up, ``greedy'' elimination strategy based on area. The algorithm iteratively removes the vertex that forms the triangle with the smallest ``effective area'' $(p_{i-1}, p_i, p_{i+1})$, calculated via the shoelace formula or cross-product. This process continues until a desired compression ratio or area threshold is reached. VW is specifically noted for its ability to preserve the ``bulk'' of organic shapes, such as coastlines and rivers, which are often distorted by distance-based filters. To satisfy the course's emphasis on efficient algorithms, this implementation utilizes a min-priority queue (min-heap) to manage and update effective areas in $O(n \log n)$ time.
+
+\section{Experimental Methodology}
+
+\subsection{Data Sourcing and Characterization}
+To evaluate the practical behavior of Douglas-Peucker and Visvalingam-Whyatt across both shape classes and scale regimes, the final dataset was organized into two categories (Mechanical and Organic) and three scale bins (Small, Medium, Large). Data preparation and characterization were executed with a reproducible Python pipeline.
+
+\subsubsection{Data Sources}
+\begin{sloppypar}
+\begin{itemize}
+    \item \textbf{Mechanical (SLO County):} Two curated trail files (\texttt{County\_Trails.geojson}, \texttt{Proposed\_Trails.geojson}) \cite{slo_gis_hub} plus four Overpass Turbo tiles exported from San Luis Obispo County \cite{overpass_turbo}.
+    \item \textbf{Organic (California boundary data):} California county boundary GeoJSON \cite{ca_open_data}, used for medium-scale organic curves and one aggregated large organic stress-test curve.
+    \item \textbf{Edge case:} A synthetic noisy-line dataset (Gaussian perturbation of a baseline straight polyline) for controlled high-frequency noise behavior.
+\end{itemize}
+\end{sloppypar}
+
+\subsubsection{Preprocessing Pipeline}
+The preprocessing flow was:
+\[
+\text{Raw GeoJSON} \rightarrow \text{segment extraction} \rightarrow \text{deduplication} \rightarrow \text{benchmark bundling} \rightarrow \text{plots}.
+\]
+For Overpass data specifically, the pipeline handled 45,657 raw segments, resulting in 45,492 unique segments after deduplication and 769,086 mechanical vertices.
+
+\subsubsection{Final Dataset Inventory}
+After preprocessing, the benchmark corpus contains 200 total features:
+\begin{itemize}
+    \item \textbf{Mechanical:} 141 features
+    \item \textbf{Organic:} 59 features
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Final scale coverage used for experiments}
+\vspace{0.5em}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Category} & \textbf{Total} & \textbf{Small ($<500$)} & \textbf{Med (5k--20k)} & \textbf{Large ($>100$k)} & \textbf{Other} \\
+\midrule
+Mechanical & 141 & 122 & 12 & 2 & 5 \\
+Organic    & 59  & 0    & 23 & 1 & 35 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Characterization Figures}
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig1_scale_coverage.png}
+        \caption{Scale coverage across Mechanical and Organic datasets.}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig2_vertex_vs_length.png}
+        \caption{Vertex count vs. path length (log-log) showing category separation.}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig3_sinuosity_boxplot.png}
+        \caption{Sinuosity distribution by category.}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig4_turning_angle_hist.png}
+        \caption{Mean absolute turning-angle complexity by category.}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{fig5_abc_snapshots.png}
+    \caption{A/B/C visual snapshots: (A) Mechanical trail, (B) Organic boundary section, and (C) Gaussian-noise edge case.}
+\end{figure}
+
+
+\subsection{Error Metrics}
+The algorithms are benchmarked on three complementary metrics:
+\begin{itemize}
+    \item \textbf{Compression Ratio:} $1 - (\text{Vertices}_{\text{simplified}} / \text{Vertices}_{\text{original}})$.
+    \item \textbf{Max Perpendicular Distance:} Calculates the maximum displacement of any original point from the simplified segment.
+    \item \textbf{Hausdorff Distance \cite{scipy_hausdorff}:} Measures the maximum deviation between the original and simplified vertex sets.
+\end{itemize}
+
+\section{Implementation Details}
+The implementation phase was built as a modular Python pipeline so that benchmarking, diagnostics, and plotting can be extended without rewriting core algorithm code.
+
+\subsection{Code Organization}
+The implementation is organized into reusable modules:
+\begin{itemize}
+    \item \texttt{impl/simplify/douglas\_peucker.py}: Douglas-Peucker simplification.
+    \item \texttt{impl/simplify/visvalingam\_whyatt.py}: Visvalingam-Whyatt simplification.
+    \item \texttt{impl/simplify/geometry.py}: metric utilities (compression, point-to-segment distance, Hausdorff-related computations).
+    \item \texttt{impl/simplify/io.py}: GeoJSON loading, curve extraction, and subset selection.
+    \item \texttt{impl/simplify/experiment.py}: experiment execution and result serialization.
+    \item \texttt{impl/run\_experiments.py}, \texttt{impl/benchmark\_suite.py}, and \texttt{impl/analyze\_results.py}: CLI runners for subset experiments and results visualization.
+\end{itemize}
+
+\subsection{Code Repository}
+Project source code and reproducibility scripts are available at:  
+\texttt{[REPO\_URL\_PLACEHOLDER]}  
+Replace this placeholder with the final GitHub repository URL before submission.
+
+\subsection{Douglas-Peucker Implementation}
+The implemented DP variant follows the original distance-threshold principle \cite{dp1973,ramer1972}, but uses an \textbf{iterative stack-based split process} instead of recursive Python calls to avoid recursion-depth issues on large curves.
+
+\paragraph{Why this is still Douglas-Peucker.}
+The defining rule of Douglas-Peucker is geometric: repeatedly keep the point with maximum perpendicular distance when that distance exceeds a threshold. Our code uses exactly this rule. The software-engineering choice (stack vs recursive function calls) changes memory/control flow, but does not change the underlying simplification criterion.
+
+As practical implementation context, this design direction is consistent with high-performance simplification tooling that prioritizes robust large-input execution in real software environments \cite{mourner_simplify}.
+
+\paragraph{Complexity interpretation for this project.}
+A single DP pass for a fixed threshold is one algorithmic step; our benchmark runner additionally performs a bounded search over $\epsilon$ to hit target compression levels (e.g., 70\%, 90\%). Therefore, practical end-to-end runtime in this project reflects multiple DP passes per target and is reported empirically in the Results section rather than claimed as one fixed asymptotic bound for the full pipeline.
+
+\subsection{Visvalingam-Whyatt Implementation}
+The VW implementation follows repeated elimination by effective area \cite{vw1992}. Each interior vertex is represented in a doubly linked structure and managed through a min-heap keyed by local triangle area. Lazy heap invalidation (version tags) is used so neighbor-area updates remain efficient and robust as points are removed. This gives the expected priority-queue-driven behavior for large inputs, and the observed scaling is presented in the runtime comparison plots.
+
+\subsection{Metric Computation and Diagnostics}
+Each run records:
+\begin{itemize}
+    \item achieved compression ratio;
+    \item maximum perpendicular error;
+    \item symmetric discrete Hausdorff distance (built from directed Hausdorff definitions) \cite{scipy_hausdorff};
+    \item runtime in milliseconds.
+\end{itemize}
+To keep large-batch experiments tractable, metric evaluation can use bounded point sampling on very large curves, while simplification itself still runs on the selected algorithm input curve.
+
+\subsection{Benchmark Integration}
+The runner infrastructure was designed for repeated subset sweeps across category and scale (Mechanical/Organic; Small/Medium/Large), with outputs written to CSV/JSON and plot files for direct use in the Results section. This makes the transition from implementation to comparative analysis reproducible and script-driven.
+
+\section{Results and Discussion}
+\subsection{Evaluation Configuration}
+The results in this section come from the merged benchmark pack produced by the implementation pipeline (\texttt{impl/output/results\_pack/all\_runs\_merged.csv}). The final set contains 232 total runs, balanced by algorithm:
+\begin{itemize}
+    \item \textbf{DP runs:} 116
+    \item \textbf{VW runs:} 116
+\end{itemize}
+Compression targets used in this pack are \{0.3, 0.5, 0.7, 0.9\}, with subsets drawn from Mechanical/Organic and Small/Medium/Large bins.
+
+\begin{table}[H]
+\centering
+\caption{Run coverage in merged benchmark pack}
+\vspace{0.5em}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Category} & \textbf{Small} & \textbf{Medium} & \textbf{Large} \\
+\midrule
+Mechanical & 200 & 8 & 8 \\
+Organic & 0 & 12 & 4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Primary Metric Results}
+The core evaluation metrics are compression ratio, maximum perpendicular distance, and Hausdorff distance. Figures R1 and R2 visualize how geometric error scales with achieved compression.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res_r1_compression_vs_max_perp.png}
+    \caption{Multi-panel plot (Mechanical/Organic by size bin) showing achieved compression on the x-axis and mean maximum perpendicular error on the y-axis, with DP and VW curves.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res_r2_compression_vs_hausdorff.png}
+    \caption{Multi-panel plot (Mechanical/Organic by size bin) showing achieved compression on the x-axis and mean Hausdorff distance on the y-axis, with DP and VW curves.}
+\end{figure}
+
+Observed patterns in this benchmark pack:
+\begin{itemize}
+    \item For \textbf{Mechanical small} curves, DP and VW are very close in error metrics (mean Hausdorff around $10^{-3}$ scale), with similar compression behavior.
+    \item For \textbf{Organic medium} curves, VW shows lower average error in this run pack (mean max perpendicular $\approx 819.17$ vs DP $\approx 2620.36$; mean Hausdorff $\approx 5690.19$ vs DP $\approx 9613.26$).
+    \item For \textbf{Large} stress-test curves, results depend strongly on geometry class: DP and VW are close on Mechanical large, while VW is lower on Hausdorff for Organic large in this sample.
+\end{itemize}
+
+\subsection{Runtime and Scaling Results}
+Runtime behavior is summarized by subset medians and by global scaling plots.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{res_r3_runtime_by_subset.png}
+    \caption{Bar chart of median runtime (log scale) for DP vs VW across Mechanical/Organic and Small/Medium/Large subsets.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{res_r4_runtime_scaling.png}
+    \caption{Runtime vs input-size scatter (log-log), comparing DP and VW scaling trends.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{res_r5_runtime_vs_hausdorff.png}
+    \caption{Runtime-error tradeoff scatter (runtime vs Hausdorff, both log scale) for DP and VW.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Median runtime comparison (current benchmark pack)}
+\vspace{0.5em}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Size bin} & \textbf{DP median (ms)} & \textbf{VW median (ms)} & \textbf{DP/VW ratio} \\
+\midrule
+Small & 0.502 & 0.039 & 12.99$\times$ \\
+Medium & 5301.304 & 164.466 & 32.23$\times$ \\
+Large & 690.559 & 102.590 & 6.73$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Complexity Guarantees vs Measured Runtime}
+This project distinguishes between \emph{algorithmic structure} and \emph{measured pipeline runtime}. Visvalingam-Whyatt is implemented with heap-based repeated elimination \cite{vw1992}. Douglas-Peucker follows the same geometric split criterion as the original method \cite{dp1973,ramer1972}, but the experimental runner uses bounded $\epsilon$ search to reach fixed compression targets, which means multiple DP passes per target in end-to-end timing.
+
+Therefore, empirical runtime in this report should be read as implementation-level performance for the full workflow (selection, simplification, and metric evaluation), not as a single closed-form asymptotic statement for every component combined. This aligns with the experimental objective of comparing algorithms with theoretical grounding against practical behavior.
+
+\subsection{Discussion and Interpretation}
+\begin{itemize}
+    \item \textbf{Accuracy-performance tradeoff.}  
+    VW frequently provides faster execution in this implementation and often lower Hausdorff on organic curves, while DP remains competitive on several mechanical subsets. The tradeoff is data-dependent rather than universally one-sided.
+    
+    \item \textbf{Role of dataset class.}  
+    The mechanical and organic classes behave differently under compression. Mechanical small curves show near-overlapping error behavior, while organic curves amplify differences in geometric preservation.
+    
+    \item \textbf{Stress-test caveat.}  
+    Large-bin stress tests include bundled/aggregated curves generated during preprocessing. These are valuable for runtime and stability evaluation but should be interpreted more cautiously for purely cartographic visual-quality claims.
+    
+    \item \textbf{Practical outcome for this project.}  
+    The implementation and benchmark infrastructure now support a reproducible comparison pipeline: adding new datasets, targets, or diagnostics requires only script-level configuration updates, not algorithm rewrites.
+\end{itemize}
+
+\section{Conclusion}
+This project set out to experimentally compare Douglas-Peucker and Visvalingam-Whyatt on heterogeneous real-world geometry while prioritizing computational-geometry concerns: algorithmic structure, runtime behavior, and error-performance tradeoffs. The final implementation and benchmark pipeline achieved that goal with reproducible runs across Mechanical/Organic and Small/Medium/Large subsets.
+
+At a high level, the results show that no single simplification method dominates every subset under every objective. In this implementation, VW is often faster and frequently stronger on organic-shape error preservation, while DP remains competitive on several mechanical subsets and provides a distinct compression/error profile that can be preferable depending on target behavior. This supports the core thesis from the proposal: geometric class matters, and algorithm choice should be guided by data characteristics rather than by a universal default.
+
+From a complexity perspective, the project also clarified an important practical distinction: theoretical guarantees describe algorithmic primitives, while measured end-to-end performance depends on implementation details and pipeline design choices (e.g., bounded $\epsilon$ search for fixed compression targets, metric computation strategy, and subset construction). Presenting both theoretical context and empirical scaling was therefore essential for an honest evaluation.
+
+The project repository has a complete foundation for continued analysis and refinement:
+\begin{itemize}
+    \item The data pipeline is broad enough to support meaningful cross-subset benchmarking.
+    \item The implementation is modular and diagnostics-ready, enabling fast iteration.
+    \item The results artifacts are already structured for direct integration into report figures and tables.
+\end{itemize}
+
+Future work will focus on deeper per-curve visual diagnostics, tighter large-scale fairness controls, and exploration of the original half-baked idea: a shape-aware selector that routes locally straight segments toward DP-like behavior and highly curved segments toward VW-like behavior. Even if such a hybrid does not fully outperform both baselines, documenting where and why it succeeds or fails remains a valuable computational-geometry contribution consistent with the course project objectives.
+
+\newpage
+\begin{thebibliography}{8}
+
+    \bibitem{ramer1972}
+    Ramer, U. (1972). An iterative procedure for the polygonal approximation of plane curves. \textit{Computer Graphics and Image Processing}, 1(3), 244-256. \url{https://www.sciencedirect.com/science/article/abs/pii/S0146664X72800170}
+
+    \bibitem{dp1973} 
+    Douglas, D. H., and Peucker, T. K. (1973). Algorithms for the reduction of the number of points required to represent a digitized line or its caricature. \textit{The Canadian Cartographer}, 10(2), 112-122. \url{https://utppublishing.com/doi/abs/10.3138/FM57-6770-U75U-7727}
+
+    \bibitem{vw1992}
+    Visvalingam, M., and Whyatt, J. D. (1992). Line generalisation by repeated elimination of points. \textit{The Cartographic Journal}, 30(1), 46-51. \url{https://www.tandfonline.com/doi/abs/10.1179/000870493786962263}
+
+    \bibitem{scipy_hausdorff}
+    SciPy Community. (2024). scipy.spatial.distance.directed\_hausdorff [Software Documentation]. \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.directed_hausdorff.html}
+
+    \bibitem{mourner_simplify}
+    Agafonkin, V. (2024). Simplify.js: A high-performance polyline simplification library. GitHub. \url{https://github.com/mourner/simplify-js}
+
+    \bibitem{overpass_turbo}
+    Raifer, M. (2024). Overpass Turbo: OpenStreetMap Data Extraction Tool. \url{https://overpass-turbo.eu/}
+
+    \bibitem{ca_open_data}
+    California Department of Technology. (2024). California County Boundaries [Dataset]. California Open Data Portal. \url{https://data.ca.gov/dataset/california-counties}
+
+    \bibitem{slo_gis_hub}
+    County of San Luis Obispo. (2024). Parks and Recreation GIS Data Hub [Dataset]. SLO County Open Data. \url{https://opendata-slocounty.hub.arcgis.com/search?tags=Parks\%20\%26\%20Recreation}
+
+\end{thebibliography}
+
+\end{document}

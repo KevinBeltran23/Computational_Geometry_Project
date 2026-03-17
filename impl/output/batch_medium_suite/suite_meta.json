@@ -1,0 +1,37 @@
+{
+  "selected_curves": 20,
+  "total_runs": 160,
+  "targets": {
+    "small": [
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "medium": [
+      0.5,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "large": [
+      0.7,
+      0.9
+    ]
+  },
+  "limits": {
+    "max_small": 0,
+    "max_medium": 10,
+    "max_large": 0
+  },
+  "metric_max_points": 1200,
+  "dp_steps": 6,
+  "algo_input_max_points": 8000,
+  "subset_counts": {
+    "Mechanical_large": 0,
+    "Mechanical_medium": 10,
+    "Mechanical_small": 0,
+    "Organic_large": 0,
+    "Organic_medium": 10
+  }
+}

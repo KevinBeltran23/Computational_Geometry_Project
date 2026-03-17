@@ -1,0 +1,16 @@
+{
+  "DP_small": {
+    "n_runs": 100,
+    "mean_runtime_ms": 6.968637062236667,
+    "mean_hausdorff": 0.0015590164880873152,
+    "mean_max_perp_error": 0.0002647670272585823,
+    "mean_achieved_compression": 0.43709820633846563
+  },
+  "VW_small": {
+    "n_runs": 100,
+    "mean_runtime_ms": 0.23329799761995673,
+    "mean_hausdorff": 0.0014896907781432077,
+    "mean_max_perp_error": 0.0002770004737104291,
+    "mean_achieved_compression": 0.4353904243160528
+  }
+}

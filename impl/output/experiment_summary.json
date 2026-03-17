@@ -1,0 +1,44 @@
+{
+  "DP_large": {
+    "n_runs": 6,
+    "mean_runtime_ms": 93627.99133865822,
+    "mean_hausdorff": 26848.244867192916,
+    "mean_max_perp_error": 12452.083160484128,
+    "mean_achieved_compression": 0.7999973404814974
+  },
+  "DP_medium": {
+    "n_runs": 8,
+    "mean_runtime_ms": 1810.5328759993427,
+    "mean_hausdorff": 4065.1014276170986,
+    "mean_max_perp_error": 31.39480886395411,
+    "mean_achieved_compression": 0.799965916447745
+  },
+  "DP_small": {
+    "n_runs": 4,
+    "mean_runtime_ms": 14.789924753131345,
+    "mean_hausdorff": 0.00021510179715174477,
+    "mean_max_perp_error": 2.498140343120722e-05,
+    "mean_achieved_compression": 0.39913544668587897
+  },
+  "VW_large": {
+    "n_runs": 6,
+    "mean_runtime_ms": 4318.060625169892,
+    "mean_hausdorff": 19449.637360167933,
+    "mean_max_perp_error": 5806.323112313428,
+    "mean_achieved_compression": 0.7999980473917288
+  },
+  "VW_medium": {
+    "n_runs": 8,
+    "mean_runtime_ms": 68.84621299104765,
+    "mean_hausdorff": 2832.918790811147,
+    "mean_max_perp_error": 57.13777284538928,
+    "mean_achieved_compression": 0.7999573383527683
+  },
+  "VW_small": {
+    "n_runs": 4,
+    "mean_runtime_ms": 0.48322499787900597,
+    "mean_hausdorff": 0.00019163707783702392,
+    "mean_max_perp_error": 5.5538296418909284e-05,
+    "mean_achieved_compression": 0.39913544668587897
+  }
+}

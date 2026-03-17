@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{flushleft}
+\textbf{Name:} Kevin Beltran \\
+\textbf{Course:} CSC 570 Computational Geometry \\
+\textbf{Assignment:} Project Proposal \\
+\textbf{Date:} February 10, 2026
+\end{flushleft}
+
+\begin{center}
+    \section*{Experimental Comparison of Visvalingam-Whyatt and Douglas-Peucker Line Simplification}
+\end{center}
+
+\subsection*{1. Statement of the Proposed Topic}
+This project will experimentally evaluate and compare two primary algorithms for 2D polyline simplification: the \textbf{Douglas-Peucker} algorithm and the \textbf{Visvalingam-Whyatt} algorithm. The primary goal is to analyze how different geometric error metrics (perpendicular distance versus triangle area) impact the "visual character" and topological integrity of a curve under high compression. This  is particularly relevant for mobile application development, where GPS tracks must be simplified for efficient storage and real-time rendering on resource-constrained devices without losing critical geospatial features.
+
+\subsection*{2. Brief Survey of Known Results}
+\begin{itemize}
+    \item \textbf{Douglas-Peucker (1973):} A top-down recursive algorithm that uses perpendicular distance as its threshold. While highly effective at preserving shape, it is prone to "spiking" artifacts and potential self-intersections during extreme simplification.
+    \item \textbf{Visvalingam-Whyatt (1992):} A bottom-up "greedy" algorithm that iteratively removes the vertex forming the triangle with the smallest "effective area." It is noted for preserving the "bulk" of organic shapes, such as coastlines and rivers.
+    \item \textbf{Geometric Primitives:} Douglas-Peucker relies on the point-to-line distance formula. In contrast, Visvalingam-Whyatt utilizes the shoelace formula or cross-product to calculate triangle area $(p_{i-1}, p_i, p_{i+1})$.
+    \item \textbf{Hybrid Approaches:} Industry-standard libraries often utilize a fast $O(n)$ Radial Distance filter as a pre-processing step to reduce the input size before running more computationally expensive $O(n \log n)$ algorithms.
+\end{itemize}
+
+\subsection*{3. Potential Plan of Attack}
+\begin{enumerate}
+    \item \textbf{Implementation:} I will implement the standard recursive Douglas-Peucker and a min-heap-accelerated Visvalingam-Whyatt in Python to ensure $O(n \log n)$ efficiency for both.
+    \item \textbf{Data Sourcing:} I will source open-source GeoJSON data representing diverse geometries: San Luis Obispo hiking trails (mechanical/linear) and complex coastal boundaries (organic/fractal).
+    \item \textbf{Benchmarking:} I will generate comparative graphs measuring \textit{Compression Ratio} (vertices removed) versus \textit{Geometric Error}. Error will be quantified using both maximum perpendicular distance and \textbf{Hausdorff distance} to measure deviation between the original and simplified sets.
+    \item \textbf{Half-Baked Idea:} I'd like to also expore some "Shape-Aware Selector" heuristic. For example, a pre-pass to calculate the local sinuosity (curviness) of segments, automatically switching between Douglas-Peucker for straight segments and Visvalingam-Whyatt for highly curved organic sections to optimize visual fidelity.
+\end{enumerate}
+
+\end{document}

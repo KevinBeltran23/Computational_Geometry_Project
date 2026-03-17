@@ -1,0 +1,18 @@
+RESULT ANALYSIS SUMMARY
+========================================================================
+Total runs: 232
+
+Per-subset means:
+- Mechanical/large/DP: n=4, mean_runtime_ms=726.047, mean_max_perp=0.045368, mean_hausdorff=0.118436, mean_compression=0.801063
+- Mechanical/large/VW: n=4, mean_runtime_ms=99.245, mean_max_perp=0.057586, mean_hausdorff=0.120791, mean_compression=0.799937
+- Mechanical/medium/DP: n=4, mean_runtime_ms=5617.425, mean_max_perp=0.003142, mean_hausdorff=0.006853, mean_compression=0.749986
+- Mechanical/medium/VW: n=4, mean_runtime_ms=209.126, mean_max_perp=0.001998, mean_hausdorff=0.009115, mean_compression=0.749969
+- Mechanical/small/DP: n=100, mean_runtime_ms=6.969, mean_max_perp=0.000265, mean_hausdorff=0.001559, mean_compression=0.437098
+- Mechanical/small/VW: n=100, mean_runtime_ms=0.233, mean_max_perp=0.000277, mean_hausdorff=0.001490, mean_compression=0.435390
+- Organic/large/DP: n=2, mean_runtime_ms=418.992, mean_max_perp=24548.504959, mean_hausdorff=108996.334586, mean_compression=0.965125
+- Organic/large/VW: n=2, mean_runtime_ms=98.667, mean_max_perp=26890.163060, mean_hausdorff=72635.042478, mean_compression=0.799937
+- Organic/medium/DP: n=6, mean_runtime_ms=3147.246, mean_max_perp=2620.358934, mean_hausdorff=9613.256167, mean_compression=0.799938
+- Organic/medium/VW: n=6, mean_runtime_ms=108.813, mean_max_perp=819.168010, mean_hausdorff=5690.194602, mean_compression=0.799938
+- Runtime median (small): DP=0.502 ms, VW=0.039 ms, speedup(DP/VW)=12.99x
+- Runtime median (medium): DP=5301.304 ms, VW=164.466 ms, speedup(DP/VW)=32.23x
+- Runtime median (large): DP=690.559 ms, VW=102.590 ms, speedup(DP/VW)=6.73x

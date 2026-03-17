@@ -1,0 +1,20 @@
+DATA CHARACTERIZATION REPORT
+========================================================================
+Total features: 200
+
+Scale coverage by category:
+- Mechanical: total=141, small=122, medium=12, large=2, uncategorized=5
+- Organic: total=59, small=0, medium=23, large=1, uncategorized=35
+
+Mechanical summary:
+- vertex_count: mean=6781.38, min=2, max=384507
+- sinuosity mean=182.187
+- turn_mean_abs mean=19.030
+
+Organic summary:
+- vertex_count: mean=9908.51, min=994, max=292301
+- sinuosity mean=7.986
+- turn_mean_abs mean=12.378
+
+Data sufficiency check:
+- Current data appears sufficient for the planned report scope.

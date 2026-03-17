@@ -1,0 +1,201 @@
+source,feature_id,geom_type,category,vertex_count,size_bin,path_length,bbox_width,bbox_height,sinuosity,turn_mean_abs,turn_std_abs
+mechanical_benchmarks,mechanical_benchmarks_0,LineString,Mechanical,347,Small (<500),0.01977025,0.00558224,0.00441564,7.06218480,20.30144764,27.23353975
+mechanical_benchmarks,mechanical_benchmarks_1,LineString,Mechanical,24,Small (<500),0.00339291,0.00166227,0.00213576,1.31959223,11.96161420,11.11228607
+mechanical_benchmarks,mechanical_benchmarks_2,LineString,Mechanical,57,Small (<500),0.00302881,0.00203652,0.00146858,1.35437774,17.97164046,14.69831193
+mechanical_benchmarks,mechanical_benchmarks_3,LineString,Mechanical,619,Uncategorized,0.14922762,0.09106829,0.02397118,1.62585457,26.18534270,21.15496812
+mechanical_benchmarks,mechanical_benchmarks_4,LineString,Mechanical,99,Small (<500),0.03584558,0.02918472,0.00607605,1.22736634,10.14058111,11.27551538
+mechanical_benchmarks,mechanical_benchmarks_5,LineString,Mechanical,86,Small (<500),0.00318920,0.00240648,0.00142684,1.14433111,6.73971454,3.44655236
+mechanical_benchmarks,mechanical_benchmarks_6,LineString,Mechanical,163,Small (<500),0.02346927,0.00909612,0.00564909,13.34167092,13.25991943,16.61181772
+mechanical_benchmarks,mechanical_benchmarks_7,LineString,Mechanical,57,Small (<500),0.00489203,0.00359715,0.00259967,1.10225145,19.12442394,18.49401373
+mechanical_benchmarks,mechanical_benchmarks_8,LineString,Mechanical,306,Small (<500),0.02004562,0.00551855,0.01165871,1.68222209,16.52655651,15.71577700
+mechanical_benchmarks,mechanical_benchmarks_9,LineString,Mechanical,77,Small (<500),0.01800784,0.01307956,0.00867017,1.20837292,10.34633297,28.35834717
+mechanical_benchmarks,mechanical_benchmarks_10,LineString,Mechanical,273,Small (<500),0.01431720,0.00642908,0.00600189,1.62972217,13.46369650,12.54174841
+mechanical_benchmarks,mechanical_benchmarks_11,LineString,Mechanical,18,Small (<500),0.01165401,0.00600291,0.00720944,1.30268842,25.26340996,19.88264573
+mechanical_benchmarks,mechanical_benchmarks_12,LineString,Mechanical,82,Small (<500),0.00960040,0.00214447,0.00317535,3.30867930,23.14967989,30.67321969
+mechanical_benchmarks,mechanical_benchmarks_13,LineString,Mechanical,43,Small (<500),0.00372079,0.00259590,0.00217615,1.09842990,17.33518341,14.41051741
+mechanical_benchmarks,mechanical_benchmarks_14,LineString,Mechanical,36,Small (<500),0.00588686,0.00479800,0.00248047,1.08990633,13.59681575,11.11040463
+mechanical_benchmarks,mechanical_benchmarks_15,LineString,Mechanical,5,Small (<500),0.00312711,0.00302693,0.00043700,1.02249424,19.49291418,7.30548137
+mechanical_benchmarks,mechanical_benchmarks_16,LineString,Mechanical,267,Small (<500),0.01651463,0.01134565,0.00311747,1.43038155,12.79945898,16.53595048
+mechanical_benchmarks,mechanical_benchmarks_17,LineString,Mechanical,192,Small (<500),0.08751256,0.03262850,0.01738150,3.27724264,56.51190889,39.45733240
+mechanical_benchmarks,mechanical_benchmarks_18,LineString,Mechanical,599,Uncategorized,0.03533454,0.00906735,0.00762083,2.98318475,12.46162693,16.30424345
+mechanical_benchmarks,mechanical_benchmarks_19,LineString,Mechanical,181,Small (<500),0.01517364,0.00682781,0.00358604,2.20264311,21.18313596,20.27645840
+mechanical_benchmarks,mechanical_benchmarks_20,LineString,Mechanical,95,Small (<500),0.01871762,0.01791690,0.00227318,1.03678699,7.47100184,6.37226454
+mechanical_benchmarks,mechanical_benchmarks_21,LineString,Mechanical,150,Small (<500),0.04274095,0.01764634,0.02059762,1.98320667,22.84540242,18.59878530
+mechanical_benchmarks,mechanical_benchmarks_22,LineString,Mechanical,68,Small (<500),0.01173731,0.00348341,0.00691629,1.52649094,17.58348472,16.32411280
+mechanical_benchmarks,mechanical_benchmarks_23,LineString,Mechanical,936,Uncategorized,0.02338693,0.00370627,0.00865698,13.09413291,10.13011190,11.18043447
+mechanical_benchmarks,mechanical_benchmarks_24,LineString,Mechanical,11,Small (<500),0.02456969,0.00888000,0.00736000,3.37791682,33.34919726,38.24269576
+mechanical_benchmarks,mechanical_benchmarks_25,LineString,Mechanical,76,Small (<500),0.00582827,0.00426598,0.00122198,1.31600420,12.99854694,15.83144212
+mechanical_benchmarks,mechanical_benchmarks_26,LineString,Mechanical,7,Small (<500),0.01561815,0.00600780,0.00370289,6.30818054,74.09268043,50.50984896
+mechanical_benchmarks,mechanical_benchmarks_27,LineString,Mechanical,16,Small (<500),0.00380313,0.00196430,0.00201734,1.35068828,28.30636727,26.22359983
+mechanical_benchmarks,mechanical_benchmarks_28,LineString,Mechanical,55,Small (<500),0.00539939,0.00115512,0.00447998,1.16750299,19.98422424,18.34110056
+mechanical_benchmarks,mechanical_benchmarks_29,LineString,Mechanical,186,Small (<500),0.02259004,0.00474324,0.00918024,2.31189206,25.43953147,25.33920744
+mechanical_benchmarks,mechanical_benchmarks_30,LineString,Mechanical,205,Small (<500),0.04289737,0.02641192,0.00934313,1.62114318,16.43011501,16.29663456
+mechanical_benchmarks,mechanical_benchmarks_31,LineString,Mechanical,171,Small (<500),0.01622000,0.00680736,0.00595285,1.82433539,22.23514757,18.06811555
+mechanical_benchmarks,mechanical_benchmarks_32,LineString,Mechanical,119,Small (<500),0.01556263,0.00901214,0.00191065,1.89100912,25.58628265,27.05849408
+mechanical_benchmarks,mechanical_benchmarks_33,LineString,Mechanical,4,Small (<500),0.01005457,0.01005150,0.00012144,1.00023824,4.40151103,4.77380525
+mechanical_benchmarks,mechanical_benchmarks_34,LineString,Mechanical,32,Small (<500),0.01907598,0.01123600,0.00838500,1.36064174,26.79088797,11.93486753
+mechanical_benchmarks,mechanical_benchmarks_35,LineString,Mechanical,27,Small (<500),0.02274888,0.01942795,0.00753362,1.09172893,9.62121149,9.04221744
+mechanical_benchmarks,mechanical_benchmarks_36,LineString,Mechanical,10,Small (<500),0.01649354,0.01564616,0.00418264,1.02206783,11.07839868,10.43501077
+mechanical_benchmarks,mechanical_benchmarks_37,LineString,Mechanical,23,Small (<500),0.01959618,0.01375391,0.00727271,1.28674832,16.05366154,8.33364683
+mechanical_benchmarks,mechanical_benchmarks_38,LineString,Mechanical,7,Small (<500),0.03718025,0.03188609,0.01873861,1.00529099,7.22344085,2.98162776
+mechanical_benchmarks,mechanical_benchmarks_39,LineString,Mechanical,15,Small (<500),0.01523779,0.01245600,0.00776800,1.03801718,21.32967306,9.44858319
+mechanical_benchmarks,mechanical_benchmarks_40,LineString,Mechanical,49,Small (<500),0.04319501,0.03251786,0.02080635,1.11962694,25.91006124,18.55967716
+mechanical_benchmarks,mechanical_benchmarks_41,LineString,Mechanical,10,Small (<500),0.00967121,0.00448500,0.00704900,1.15755541,21.09418201,10.77097323
+mechanical_benchmarks,mechanical_benchmarks_42,LineString,Mechanical,9,Small (<500),0.00640644,0.00178000,0.00603400,1.01833854,28.95961755,20.12925988
+mechanical_benchmarks,mechanical_benchmarks_43,LineString,Mechanical,19,Small (<500),0.01825561,0.01601500,0.00368500,1.13817026,25.30233078,13.44876777
+mechanical_benchmarks,mechanical_benchmarks_44,LineString,Mechanical,27,Small (<500),0.02015817,0.00667600,0.01299400,1.37987802,24.98796512,14.97910876
+mechanical_benchmarks,mechanical_benchmarks_45,LineString,Mechanical,39,Small (<500),0.03869217,0.01016300,0.02477979,1.45216999,22.94701638,21.22971059
+mechanical_benchmarks,mechanical_benchmarks_46,LineString,Mechanical,58,Small (<500),0.03110014,0.01009700,0.01183100,2.15564201,41.77413160,18.10357078
+mechanical_benchmarks,mechanical_benchmarks_47,LineString,Mechanical,91,Small (<500),0.05345041,0.01826600,0.03026100,1.72858358,38.58775323,24.61896103
+mechanical_benchmarks,mechanical_benchmarks_48,LineString,Mechanical,1102,Uncategorized,0.23397180,0.15250709,0.15922276,1.06120519,0.45165698,2.89840170
+mechanical_benchmarks,mechanical_benchmarks_49,LineString,Mechanical,48,Small (<500),0.02386335,0.01367085,0.01078866,1.53504714,38.45709688,19.10472812
+mechanical_benchmarks,mechanical_benchmarks_50,LineString,Mechanical,3,Small (<500),0.02481035,0.02471423,0.00096446,1.00349014,11.94312701,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_51,LineString,Mechanical,5,Small (<500),0.00341552,0.00307100,0.00121400,1.03429997,20.01381057,13.10136000
+mechanical_benchmarks,mechanical_benchmarks_52,LineString,Mechanical,111,Small (<500),0.03869306,0.01299558,0.03276864,1.09869177,4.20062058,13.61721115
+mechanical_benchmarks,mechanical_benchmarks_53,LineString,Mechanical,6,Small (<500),0.04536205,0.01235573,0.04272446,1.02221120,11.41686503,6.24954071
+mechanical_benchmarks,mechanical_benchmarks_54,LineString,Mechanical,699,Uncategorized,0.72164756,0.16380998,0.10301533,3.72926457,20.34655851,21.93210198
+mechanical_benchmarks,mechanical_benchmarks_55,LineString,Mechanical,27,Small (<500),0.06554254,0.02212895,0.05557474,1.10545464,15.13829339,14.57688098
+mechanical_benchmarks,mechanical_benchmarks_56,LineString,Mechanical,290,Small (<500),0.20322537,0.04277725,0.15982714,1.23442653,7.53729382,15.26333549
+mechanical_benchmarks,mechanical_benchmarks_57,LineString,Mechanical,14,Small (<500),0.10238948,0.09380098,0.03469517,1.02401480,8.01756197,7.13567049
+mechanical_benchmarks,mechanical_benchmarks_58,LineString,Mechanical,36,Small (<500),0.02079553,0.00533700,0.01163400,1.77394197,31.52240836,14.40079060
+mechanical_benchmarks,mechanical_benchmarks_59,LineString,Mechanical,68,Small (<500),0.05698034,0.04294108,0.03583598,1.01878142,4.29308715,3.58995065
+mechanical_benchmarks,mechanical_benchmarks_60,LineString,Mechanical,42,Small (<500),0.06809938,0.06387699,0.00605485,1.06205853,13.74874763,13.49684588
+mechanical_benchmarks,mechanical_benchmarks_61,LineString,Mechanical,6,Small (<500),0.00422109,0.00322100,0.00261800,1.01694412,16.06610128,8.48060221
+mechanical_benchmarks,mechanical_benchmarks_62,LineString,Mechanical,5,Small (<500),0.00543950,0.00457600,0.00280200,1.01374930,13.51287857,1.31891192
+mechanical_benchmarks,mechanical_benchmarks_63,LineString,Mechanical,5,Small (<500),0.02953647,0.02765479,0.00884225,1.01835923,11.27621682,6.02961739
+mechanical_benchmarks,mechanical_benchmarks_64,LineString,Mechanical,26,Small (<500),0.04716332,0.04128168,0.00731921,1.14165419,21.11873760,15.93370528
+mechanical_benchmarks,mechanical_benchmarks_65,LineString,Mechanical,7,Small (<500),0.00527601,0.00380400,0.00316800,1.06577051,15.26161126,11.28807430
+mechanical_benchmarks,mechanical_benchmarks_66,LineString,Mechanical,2,Small (<500),0.00050603,0.00039200,0.00032000,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_67,LineString,Mechanical,2,Small (<500),0.00078212,0.00061200,0.00048700,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_68,LineString,Mechanical,3,Small (<500),0.00316502,0.00235300,0.00211400,1.00058694,4.55033950,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_69,LineString,Mechanical,5,Small (<500),0.00191500,0.00185300,0.00023200,1.03192542,13.08614366,8.38998786
+mechanical_benchmarks,mechanical_benchmarks_70,LineString,Mechanical,5,Small (<500),0.00316588,0.00286400,0.00107300,1.03514278,15.29315317,8.92142635
+mechanical_benchmarks,mechanical_benchmarks_71,LineString,Mechanical,9,Small (<500),0.00896148,0.00341600,0.00791000,1.04008582,16.55132442,8.89188311
+mechanical_benchmarks,mechanical_benchmarks_72,LineString,Mechanical,3,Small (<500),0.00129498,0.00106100,0.00073000,1.00552047,12.04722642,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_73,LineString,Mechanical,6,Small (<500),0.00306637,0.00246300,0.00175900,1.01313362,15.82806186,9.47700658
+mechanical_benchmarks,mechanical_benchmarks_74,LineString,Mechanical,2,Small (<500),0.00046929,0.00038100,0.00027400,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_75,LineString,Mechanical,3,Small (<500),0.00155690,0.00150800,0.00037700,1.00160095,6.56662139,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_76,LineString,Mechanical,3,Small (<500),0.00181292,0.00175100,0.00039600,1.00985761,18.27827236,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_77,LineString,Mechanical,5,Small (<500),0.00272406,0.00252800,0.00067900,1.05871775,16.95094645,4.86564389
+mechanical_benchmarks,mechanical_benchmarks_78,LineString,Mechanical,2,Small (<500),0.00094810,0.00093200,0.00017400,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_79,LineString,Mechanical,5,Small (<500),0.00327523,0.00226900,0.00225400,1.02406596,23.35018472,3.10002049
+mechanical_benchmarks,mechanical_benchmarks_80,LineString,Mechanical,3,Small (<500),0.00026447,0.00022600,0.00013500,1.00464678,11.66399634,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_81,LineString,Mechanical,3,Small (<500),0.00114712,0.00109800,0.00025900,1.01683390,20.91352019,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_82,LineString,Mechanical,9,Small (<500),0.00716014,0.00691400,0.00075700,1.03230376,17.63202484,4.67629088
+mechanical_benchmarks,mechanical_benchmarks_83,LineString,Mechanical,3,Small (<500),0.00141885,0.00140700,0.00016700,1.00139387,7.06536136,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_84,LineString,Mechanical,2,Small (<500),0.00111912,0.00111200,0.00012600,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_85,LineString,Mechanical,3,Small (<500),0.00238480,0.00227200,0.00067300,1.00642470,16.16257842,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_86,LineString,Mechanical,3,Small (<500),0.00068980,0.00068200,0.00008100,1.00629999,13.35487273,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_87,LineString,Mechanical,4,Small (<500),0.00214374,0.00206300,0.00047800,1.01232112,10.82218735,5.69674093
+mechanical_benchmarks,mechanical_benchmarks_88,LineString,Mechanical,2,Small (<500),0.00016985,0.00016700,0.00003100,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_89,LineString,Mechanical,2,Small (<500),0.00048425,0.00047600,0.00008900,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_90,LineString,Mechanical,3,Small (<500),0.00339207,0.00338200,0.00024600,1.00033366,3.51031986,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_91,LineString,Mechanical,4,Small (<500),0.00572118,0.00531600,0.00210400,1.00088454,16.45717346,16.08751639
+mechanical_benchmarks,mechanical_benchmarks_92,LineString,Mechanical,14,Small (<500),0.01385950,0.01224800,0.00299800,1.11523708,20.36865062,15.08716028
+mechanical_benchmarks,mechanical_benchmarks_93,LineString,Mechanical,4,Small (<500),0.00458029,0.00399900,0.00201300,1.02305464,17.69914800,9.56309195
+mechanical_benchmarks,mechanical_benchmarks_94,LineString,Mechanical,7,Small (<500),0.00437667,0.00327100,0.00265500,1.03887389,23.60140410,7.85227361
+mechanical_benchmarks,mechanical_benchmarks_95,LineString,Mechanical,3,Small (<500),0.00135066,0.00132000,0.00025500,1.00465554,11.28503018,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_96,LineString,Mechanical,3,Small (<500),0.00068897,0.00059800,0.00030100,1.02911129,27.42715226,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_97,LineString,Mechanical,4,Small (<500),0.00057340,0.00040300,0.00037100,1.04679196,23.18518680,23.82237377
+mechanical_benchmarks,mechanical_benchmarks_98,LineString,Mechanical,2,Small (<500),0.00081592,0.00077700,0.00024900,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_99,LineString,Mechanical,2,Small (<500),0.00017741,0.00017700,0.00001200,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_100,LineString,Mechanical,2,Small (<500),0.00058232,0.00043600,0.00038600,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_101,LineString,Mechanical,3,Small (<500),0.00116322,0.00114600,0.00011500,1.01437973,19.44316696,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_102,LineString,Mechanical,4,Small (<500),0.00184645,0.00173300,0.00045800,1.04173545,20.20125541,9.66533985
+mechanical_benchmarks,mechanical_benchmarks_103,LineString,Mechanical,3,Small (<500),0.00183664,0.00064200,0.00169400,1.01383783,22.31520601,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_104,LineString,Mechanical,11,Small (<500),0.00532927,0.00408000,0.00277400,1.10074873,30.29336956,16.26020154
+mechanical_benchmarks,mechanical_benchmarks_105,LineString,Mechanical,8,Small (<500),0.00414456,0.00382900,0.00109500,1.05964581,16.14707598,6.78008404
+mechanical_benchmarks,mechanical_benchmarks_106,LineString,Mechanical,16,Small (<500),0.01578961,0.01403400,0.00542300,1.05458657,18.59222863,13.14505281
+mechanical_benchmarks,mechanical_benchmarks_107,LineString,Mechanical,8,Small (<500),0.00511924,0.00421800,0.00270300,1.02185344,17.51297746,2.76276354
+mechanical_benchmarks,mechanical_benchmarks_108,LineString,Mechanical,2,Small (<500),0.00047200,0.00047200,0.00000000,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_109,LineString,Mechanical,2,Small (<500),0.00045000,0.00045000,0.00000000,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_110,LineString,Mechanical,7,Small (<500),0.00327264,0.00313000,0.00073300,1.02119290,23.00048140,11.21215672
+mechanical_benchmarks,mechanical_benchmarks_111,LineString,Mechanical,22,Small (<500),0.01784350,0.01614921,0.00332198,1.08563442,16.87009922,11.13968076
+mechanical_benchmarks,mechanical_benchmarks_112,LineString,Mechanical,3,Small (<500),0.00057290,0.00027000,0.00049000,1.02401299,25.51088382,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_113,LineString,Mechanical,11,Small (<500),0.01503199,0.01463300,0.00148900,1.02198893,12.26864582,5.24061757
+mechanical_benchmarks,mechanical_benchmarks_114,LineString,Mechanical,2,Small (<500),0.00443239,0.00417800,0.00148000,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_115,LineString,Mechanical,4,Small (<500),0.00455272,0.00427400,0.00151900,1.00370757,29.58755008,1.93441023
+mechanical_benchmarks,mechanical_benchmarks_116,LineString,Mechanical,3,Small (<500),0.00441550,0.00415500,0.00147800,1.00123579,8.36148524,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_117,LineString,Mechanical,3,Small (<500),0.00394105,0.00370200,0.00131600,1.00307882,13.89505316,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_118,LineString,Mechanical,9,Small (<500),0.01443703,0.00691800,0.01238500,1.01768456,13.31774880,9.07623581
+mechanical_benchmarks,mechanical_benchmarks_119,LineString,Mechanical,7,Small (<500),0.01807424,0.00597898,0.00365554,25.23260391,71.63510139,44.40495437
+mechanical_benchmarks,mechanical_benchmarks_120,LineString,Mechanical,3,Small (<500),0.00118442,0.00115000,0.00025100,1.00624080,15.61626718,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_121,LineString,Mechanical,3,Small (<500),0.00023883,0.00009800,0.00019800,1.08102420,44.86226675,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_122,LineString,Mechanical,2,Small (<500),0.00042857,0.00041200,0.00011800,1.00000000,0.00000000,0.00000000
+mechanical_benchmarks,mechanical_benchmarks_123,LineString,Mechanical,27,Small (<500),0.08205575,0.02646307,0.02488264,75.38211874,22.25791049,18.11466330
+mechanical_benchmarks,mechanical_benchmarks_124,LineString,Mechanical,29,Small (<500),0.01524966,0.00310800,0.01062200,1.40838141,41.68983383,17.92743154
+mechanical_benchmarks,mechanical_benchmarks_125,LineString,Mechanical,53,Small (<500),0.10381744,0.08331015,0.04102985,1.11793147,12.86045306,15.94128032
+mechanical_benchmarks,mechanical_benchmarks_126,LineString,Mechanical,10,Small (<500),0.14213170,0.11845525,0.06659574,1.05412662,18.67861094,24.91635593
+mechanical_benchmarks,mechanical_benchmarks_127,LineString,Mechanical,14572,Medium (5k-20k),10.29588096,1.42680440,0.95581910,8.16028982,15.93156994,14.35482070
+mechanical_benchmarks,mechanical_benchmarks_128,LineString,Mechanical,14737,Medium (5k-20k),17.33660745,1.44992940,1.04802320,36.78143370,14.87445266,14.49408314
+mechanical_benchmarks,mechanical_benchmarks_129,LineString,Mechanical,14899,Medium (5k-20k),24.03659361,1.39162050,1.15872600,52.85244226,16.09714260,16.30123102
+mechanical_benchmarks,mechanical_benchmarks_130,LineString,Mechanical,14850,Medium (5k-20k),24.55199617,1.33265970,1.14042040,33.26366787,16.84080364,18.57008385
+mechanical_benchmarks,mechanical_benchmarks_131,LineString,Mechanical,14996,Medium (5k-20k),28.14409355,1.32365450,1.10302590,60.13134180,15.59954365,17.03219036
+mechanical_benchmarks,mechanical_benchmarks_132,LineString,Mechanical,14823,Medium (5k-20k),38.10071119,1.46332540,1.18793460,210.47786856,15.46235076,17.08138699
+mechanical_benchmarks,mechanical_benchmarks_133,LineString,Mechanical,14905,Medium (5k-20k),44.48385821,1.40707770,1.14479340,111.62391048,16.45299277,17.93514547
+mechanical_benchmarks,mechanical_benchmarks_134,LineString,Mechanical,14907,Medium (5k-20k),43.39367145,1.40018060,1.15192390,275.47188456,15.19024797,17.53586131
+mechanical_benchmarks,mechanical_benchmarks_135,LineString,Mechanical,14898,Medium (5k-20k),45.03229026,1.44051570,1.11980820,93.12301201,16.72991245,19.30393695
+mechanical_benchmarks,mechanical_benchmarks_136,LineString,Mechanical,14876,Medium (5k-20k),47.27263932,1.44122270,1.08109860,125.04582955,17.71964914,19.37481341
+mechanical_benchmarks,mechanical_benchmarks_137,LineString,Mechanical,14878,Medium (5k-20k),52.16244317,1.35193970,1.08053020,131.14673708,15.60992445,17.49972694
+mechanical_benchmarks,mechanical_benchmarks_138,LineString,Mechanical,14892,Medium (5k-20k),51.13987560,1.43323870,1.11175960,346.51826632,16.78385995,19.21046597
+mechanical_benchmarks,mechanical_benchmarks_139,LineString,Mechanical,384507,Large (>100k),4287.70004339,1.51416010,1.20617460,7200.41442177,25.17265915,33.84382964
+mechanical_benchmarks,mechanical_benchmarks_140,LineString,Mechanical,384497,Large (>100k),4272.74617144,1.53355940,1.21917840,16710.91914080,25.11258178,33.89281507
+organic_benchmarks,organic_benchmarks_0,MultiPolygon,Organic,2693,Uncategorized,389849.73748027,97099.23444630,63525.47221135,3.35980658,16.57076712,27.59938151
+organic_benchmarks,organic_benchmarks_1,Polygon,Organic,1753,Uncategorized,275322.48796314,59110.55089950,86418.84786437,2.62961004,12.93601025,16.46349305
+organic_benchmarks,organic_benchmarks_2,Polygon,Organic,4800,Uncategorized,359596.42095926,106352.09549830,69816.88484611,2.82655074,10.39753820,12.40421504
+organic_benchmarks,organic_benchmarks_3,Polygon,Organic,3340,Uncategorized,385073.98601789,110180.93722160,70465.50207637,2.94428450,14.09492422,17.47862846
+organic_benchmarks,organic_benchmarks_4,Polygon,Organic,6476,Medium (5k-20k),467762.88593283,140746.48439660,80707.46007686,2.88307451,9.26635855,11.37773693
+organic_benchmarks,organic_benchmarks_5,MultiPolygon,Organic,7143,Medium (5k-20k),785783.46912154,111713.28529840,215174.97247340,3.24106416,16.28850044,17.18304431
+organic_benchmarks,organic_benchmarks_6,Polygon,Organic,4283,Uncategorized,1058534.66227325,349729.62872880,232860.36320506,2.51935847,12.53117857,18.02590358
+organic_benchmarks,organic_benchmarks_7,Polygon,Organic,2732,Uncategorized,861787.66218122,286965.22082170,137718.63118789,2.70746227,3.40031115,15.39574849
+organic_benchmarks,organic_benchmarks_8,Polygon,Organic,5179,Medium (5k-20k),468323.92157602,83939.80896730,130674.89801265,3.01537480,12.61734528,18.55164413
+organic_benchmarks,organic_benchmarks_9,Polygon,Organic,1873,Uncategorized,776769.07393770,148805.24739780,216045.23527324,2.96100528,6.83869474,22.03602093
+organic_benchmarks,organic_benchmarks_10,MultiPolygon,Organic,6116,Medium (5k-20k),624766.29451387,144551.01967880,150816.31182874,2.99069723,5.64459807,17.05785538
+organic_benchmarks,organic_benchmarks_11,Polygon,Organic,6249,Medium (5k-20k),599757.05041540,169558.86339390,141980.15466225,2.71195743,11.33108390,14.61893949
+organic_benchmarks,organic_benchmarks_12,Polygon,Organic,3995,Uncategorized,427729.81260230,121133.10141920,101229.82182982,2.70950127,11.45868921,15.55815368
+organic_benchmarks,organic_benchmarks_13,Polygon,Organic,1948,Uncategorized,566241.80082244,162406.93140740,121156.44127987,2.79459872,1.42460432,7.35092598
+organic_benchmarks,organic_benchmarks_14,Polygon,Organic,3775,Uncategorized,694077.27483566,202466.04181620,176891.29283990,2.58160419,13.26651377,17.24064389
+organic_benchmarks,organic_benchmarks_15,Polygon,Organic,11410,Medium (5k-20k),780706.44166395,196451.05688670,156293.90196262,3.10989554,20.73658991,22.39288862
+organic_benchmarks,organic_benchmarks_16,Polygon,Organic,7118,Medium (5k-20k),532897.12804062,164973.39196560,86693.57389964,2.85942368,8.77307402,11.18280294
+organic_benchmarks,organic_benchmarks_17,Polygon,Organic,4070,Uncategorized,911415.94508005,360868.35236220,87562.69926239,2.45439923,3.69088221,12.91873205
+organic_benchmarks,organic_benchmarks_18,Polygon,Organic,4892,Uncategorized,406542.58552510,93011.67592330,101955.48593590,2.94579889,7.03094765,10.97426971
+organic_benchmarks,organic_benchmarks_19,Polygon,Organic,5567,Medium (5k-20k),1247138.98417323,408690.43377940,262925.39594327,2.56633803,2.96492454,11.96601270
+organic_benchmarks,organic_benchmarks_20,Polygon,Organic,3385,Uncategorized,688895.66896364,168673.62205360,128875.66801696,3.24533227,16.36118214,28.40280568
+organic_benchmarks,organic_benchmarks_21,MultiPolygon,Organic,994,Uncategorized,110244.88102450,17539.72158020,14611.93701683,4.82921831,40.79991486,41.40161980
+organic_benchmarks,organic_benchmarks_22,Polygon,Organic,4770,Uncategorized,418965.90640299,73971.59443570,115453.05180734,3.05552508,13.14445486,16.16649898
+organic_benchmarks,organic_benchmarks_23,Polygon,Organic,7393,Medium (5k-20k),736249.87569265,208704.39842980,122518.84920224,3.04224072,13.06848413,19.87895467
+organic_benchmarks,organic_benchmarks_24,Polygon,Organic,4549,Uncategorized,287094.51929857,81989.93751800,60722.63780700,2.81389650,13.32194833,20.57608548
+organic_benchmarks,organic_benchmarks_25,Polygon,Organic,9009,Medium (5k-20k),706438.31922356,194682.44733450,132165.04187665,3.00221287,11.13440861,11.81921812
+organic_benchmarks,organic_benchmarks_26,MultiPolygon,Organic,5467,Medium (5k-20k),323766.58798628,77633.56148750,71949.99834273,3.05879164,10.21865674,14.46049760
+organic_benchmarks,organic_benchmarks_27,Polygon,Organic,12311,Medium (5k-20k),507502.66427142,131812.41270170,105350.30668525,3.00760081,15.83263931,16.19183482
+organic_benchmarks,organic_benchmarks_28,Polygon,Organic,3700,Uncategorized,478198.22981016,122389.78610240,132459.37668918,2.65155723,12.70329892,19.70577374
+organic_benchmarks,organic_benchmarks_29,Polygon,Organic,5378,Medium (5k-20k),802010.04612253,131183.13381740,204191.98801474,3.30452994,15.90323721,17.04995255
+organic_benchmarks,organic_benchmarks_30,Polygon,Organic,3359,Uncategorized,645378.23307641,177268.86691290,131979.00194882,2.92021243,11.56649002,18.92903171
+organic_benchmarks,organic_benchmarks_31,Polygon,Organic,6471,Medium (5k-20k),626970.55553459,162202.76568500,113041.21020383,3.17121093,13.74950878,15.93931729
+organic_benchmarks,organic_benchmarks_32,Polygon,Organic,4370,Uncategorized,362941.18803042,69785.19196690,103704.59499821,2.90356518,10.64361892,14.64496182
+organic_benchmarks,organic_benchmarks_33,Polygon,Organic,7393,Medium (5k-20k),420527.25296801,102528.72375690,87323.36107436,3.12252073,9.84326212,12.35030353
+organic_benchmarks,organic_benchmarks_34,Polygon,Organic,2460,Uncategorized,525747.23178398,110510.88669920,123953.02713281,3.16594535,18.45384854,22.99906148
+organic_benchmarks,organic_benchmarks_35,Polygon,Organic,3210,Uncategorized,367002.37395146,108597.63239230,96005.59528643,2.53192287,12.73877590,14.54695737
+organic_benchmarks,organic_benchmarks_36,MultiPolygon,Organic,2495,Uncategorized,358020.87001078,99705.66349330,53805.22521626,3.16001934,15.77592055,25.20157776
+organic_benchmarks,organic_benchmarks_37,MultiPolygon,Organic,2497,Uncategorized,380462.45224729,82161.72613760,92428.03563915,3.07651110,16.32664703,18.96816822
+organic_benchmarks,organic_benchmarks_38,Polygon,Organic,9611,Medium (5k-20k),1104152.02869181,284771.44496800,233262.17724725,2.99950494,12.23208595,16.24779086
+organic_benchmarks,organic_benchmarks_39,Polygon,Organic,1929,Uncategorized,396617.83247211,120451.27265610,60327.84666294,2.94413928,8.31666040,15.95605827
+organic_benchmarks,organic_benchmarks_40,Polygon,Organic,1928,Uncategorized,593053.43428488,182940.47829700,108260.91362245,2.78987006,4.72746558,12.08395189
+organic_benchmarks,organic_benchmarks_41,Polygon,Organic,2334,Uncategorized,353612.52603786,93587.86518110,96542.91282072,2.62989110,5.60390516,13.32703520
+organic_benchmarks,organic_benchmarks_42,MultiPolygon,Organic,4922,Uncategorized,475009.52735387,65242.46121580,71565.58235782,4.90503729,21.86184104,22.61260155
+organic_benchmarks,organic_benchmarks_43,MultiPolygon,Organic,6367,Medium (5k-20k),770484.95050911,133790.90791490,179062.05286973,3.44698128,23.75302919,24.06065029
+organic_benchmarks,organic_benchmarks_44,Polygon,Organic,3551,Uncategorized,433094.13809261,133204.03133620,124780.39087693,2.37286175,9.83896790,15.56341817
+organic_benchmarks,organic_benchmarks_45,MultiPolygon,Organic,15528,Medium (5k-20k),405725.89962832,65146.29450600,100916.49446240,3.37774592,12.12419949,12.47986920
+organic_benchmarks,organic_benchmarks_46,Polygon,Organic,7665,Medium (5k-20k),433694.90853334,142044.91271460,75021.15386295,2.69980859,9.35863703,9.49600412
+organic_benchmarks,organic_benchmarks_47,Polygon,Organic,2033,Uncategorized,256330.36522676,78268.62748900,74974.25920887,2.36501772,8.28867710,22.63309690
+organic_benchmarks,organic_benchmarks_48,Polygon,Organic,2432,Uncategorized,656233.83559588,155684.90532940,123921.26647700,3.29793771,16.61528127,24.84429205
+organic_benchmarks,organic_benchmarks_49,Polygon,Organic,6526,Medium (5k-20k),456415.67478021,116600.40078520,109824.57734807,2.84942245,14.68705429,15.91843391
+organic_benchmarks,organic_benchmarks_50,Polygon,Organic,3426,Uncategorized,314704.23872603,45118.94546150,84299.01369486,3.29140227,20.36851718,26.17836006
+organic_benchmarks,organic_benchmarks_51,MultiPolygon,Organic,6627,Medium (5k-20k),523914.78806830,137051.86882090,100507.24248692,3.08265603,12.03807457,17.92297057
+organic_benchmarks,organic_benchmarks_52,MultiPolygon,Organic,7094,Medium (5k-20k),447429.37110541,110704.47128970,82676.46065416,3.23825876,13.51716953,19.99570631
+organic_benchmarks,organic_benchmarks_53,Polygon,Organic,8350,Medium (5k-20k),624407.32605495,191886.44452910,95468.14892992,2.91338673,11.65185543,12.60563544
+organic_benchmarks,organic_benchmarks_54,Polygon,Organic,4986,Uncategorized,373547.12887084,117707.35493920,55656.33562651,181.71910728,10.33307435,10.77928025
+organic_benchmarks,organic_benchmarks_55,Polygon,Organic,4931,Uncategorized,895800.73151035,253049.28508490,151212.88250716,3.03880850,11.17845112,16.51656132
+organic_benchmarks,organic_benchmarks_56,Polygon,Organic,4280,Uncategorized,350287.59349738,59435.60445630,81824.96000056,3.46362765,9.99293580,14.39397201
+organic_benchmarks,organic_benchmarks_57,Polygon,Organic,3158,Uncategorized,388258.76577141,94155.15518090,115578.97414969,2.60443282,8.28778411,15.49090978
+organic_benchmarks,organic_benchmarks_58,LineString,Organic,292301,Large (>100k),59653920.41749339,1144182.78458490,1328747.81601718,118.25657451,12.66565205,17.92861531

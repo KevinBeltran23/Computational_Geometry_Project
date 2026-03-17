@@ -1,0 +1,13 @@
+{
+  "curated_features": 127,
+  "overpass_raw_segments": 45657,
+  "overpass_unique_segments": 45492,
+  "overpass_unique_vertices": 769086,
+  "medium_bundles": 12,
+  "large_bundle_a_vertices": 384543,
+  "large_bundle_b_vertices": 384543,
+  "derived_mechanical_features": 141,
+  "derived_organic_features": 59,
+  "organic_large_vertices": 292301,
+  "tiles_used": 4
+}

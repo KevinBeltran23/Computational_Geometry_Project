@@ -1,0 +1,82 @@
+{
+  "Mechanical_large_DP": {
+    "n_runs": 4,
+    "mean_runtime_ms": 767.077538985177,
+    "median_runtime_ms": 836.5981709794141,
+    "mean_max_perp_error": 0.03975704369386,
+    "mean_hausdorff": 0.0997998528015563,
+    "mean_achieved_compression": 0.80215625
+  },
+  "Mechanical_large_VW": {
+    "n_runs": 4,
+    "mean_runtime_ms": 75.14679625455756,
+    "median_runtime_ms": 82.3138959822245,
+    "mean_max_perp_error": 0.05903232161384367,
+    "mean_hausdorff": 0.07891761717675351,
+    "mean_achieved_compression": 0.7999375
+  },
+  "Mechanical_medium_DP": {
+    "n_runs": 48,
+    "mean_runtime_ms": 496.1535744587309,
+    "median_runtime_ms": 510.83830202696845,
+    "mean_max_perp_error": 0.006603710191931427,
+    "mean_hausdorff": 0.04369576686212314,
+    "mean_achieved_compression": 0.9818229166666667
+  },
+  "Mechanical_medium_VW": {
+    "n_runs": 48,
+    "mean_runtime_ms": 97.5146545364017,
+    "median_runtime_ms": 99.24860496539623,
+    "mean_max_perp_error": 0.0015928136594161493,
+    "mean_hausdorff": 0.007084715719546747,
+    "mean_achieved_compression": 0.72496875
+  },
+  "Mechanical_small_DP": {
+    "n_runs": 100,
+    "mean_runtime_ms": 1.6464500105939806,
+    "median_runtime_ms": 0.1629000180400908,
+    "mean_max_perp_error": 0.00026781194802103273,
+    "mean_hausdorff": 0.0016073266699559252,
+    "mean_achieved_compression": 0.44926873181625043
+  },
+  "Mechanical_small_VW": {
+    "n_runs": 100,
+    "mean_runtime_ms": 0.2880629972787574,
+    "median_runtime_ms": 0.05370000144466758,
+    "mean_max_perp_error": 0.0002770004737104291,
+    "mean_hausdorff": 0.0014896907781432077,
+    "mean_achieved_compression": 0.4353904243160528
+  },
+  "Organic_large_DP": {
+    "n_runs": 2,
+    "mean_runtime_ms": 668.6361609608866,
+    "median_runtime_ms": 723.2468209695071,
+    "mean_max_perp_error": 5757.256926222632,
+    "mean_hausdorff": 134735.664090186,
+    "mean_achieved_compression": 0.925
+  },
+  "Organic_large_VW": {
+    "n_runs": 2,
+    "mean_runtime_ms": 128.2175015367102,
+    "median_runtime_ms": 150.85840004030615,
+    "mean_max_perp_error": 9888.871347266911,
+    "mean_hausdorff": 76320.56003454397,
+    "mean_achieved_compression": 0.7999375
+  },
+  "Organic_medium_DP": {
+    "n_runs": 60,
+    "mean_runtime_ms": 238.51283155284668,
+    "median_runtime_ms": 233.53150096954778,
+    "mean_max_perp_error": 824.9249721467237,
+    "mean_hausdorff": 33910.48714092384,
+    "mean_achieved_compression": 0.9859573881368646
+  },
+  "Organic_medium_VW": {
+    "n_runs": 60,
+    "mean_runtime_ms": 68.45396861899644,
+    "median_runtime_ms": 66.36160000925884,
+    "mean_max_perp_error": 224.4080690520662,
+    "mean_hausdorff": 5576.17012089223,
+    "mean_achieved_compression": 0.7249454183125644
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "Mechanical_large_DP": {
+    "n_runs": 4,
+    "mean_runtime_ms": 726.0470817418536,
+    "median_runtime_ms": 745.1431180234067,
+    "mean_max_perp_error": 0.04536803415220127,
+    "mean_hausdorff": 0.11843618575750857,
+    "mean_achieved_compression": 0.8010625
+  },
+  "Mechanical_large_VW": {
+    "n_runs": 4,
+    "mean_runtime_ms": 99.2448264878476,
+    "median_runtime_ms": 102.59049996966496,
+    "mean_max_perp_error": 0.05758609007196484,
+    "mean_hausdorff": 0.12079123494532729,
+    "mean_achieved_compression": 0.7999375
+  },
+  "Organic_large_DP": {
+    "n_runs": 2,
+    "mean_runtime_ms": 418.9918804913759,
+    "median_runtime_ms": 432.6468509971164,
+    "mean_max_perp_error": 24548.504958558893,
+    "mean_hausdorff": 108996.33458614335,
+    "mean_achieved_compression": 0.965125
+  },
+  "Organic_large_VW": {
+    "n_runs": 2,
+    "mean_runtime_ms": 98.66710749338381,
+    "median_runtime_ms": 103.53511199355125,
+    "mean_max_perp_error": 26890.163060466573,
+    "mean_hausdorff": 72635.04247793788,
+    "mean_achieved_compression": 0.7999375
+  }
+}

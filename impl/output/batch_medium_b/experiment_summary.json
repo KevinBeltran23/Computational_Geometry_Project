@@ -1,0 +1,16 @@
+{
+  "DP_medium": {
+    "n_runs": 2,
+    "mean_runtime_ms": 3859.075421001762,
+    "mean_hausdorff": 6903.216009125847,
+    "mean_max_perp_error": 2436.545116812881,
+    "mean_achieved_compression": 0.6999283376204591
+  },
+  "VW_medium": {
+    "n_runs": 2,
+    "mean_runtime_ms": 127.76384901371785,
+    "mean_hausdorff": 2572.8526565900975,
+    "mean_max_perp_error": 727.592268569108,
+    "mean_achieved_compression": 0.6999283376204591
+  }
+}
