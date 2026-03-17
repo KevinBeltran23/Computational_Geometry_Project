@@ -27,7 +27,7 @@
 \section{Introduction}
 Modern maps, GPS logs, and boundary datasets are often represented as \emph{polylines}: ordered lists of 2D points (vertices) connected by line segments. As datasets grow, these polylines can contain thousands to hundreds of thousands of vertices, which increases storage, transmission cost, and rendering time. Polyline simplification addresses this by removing vertices while preserving the essential shape of the original curve.
 
-The central challenge is not only to reduce point count, but to do so without destroying geometric structure. In practical terms, a simplification method should keep important bends and turns while removing redundant detail. This project studies that balance through an experimental comparison of two classical methods: Douglas-Peucker (DP) and Visvalingam-Whyatt (VW).
+The central challenge is not only to reduce point count, but to do so without destroying geometric structure. In practical terms, a simplification method should keep important bends and turns while removing redundant detail. This project studies that balance through an experimental comparison of two classical methods: Douglas-Peucker (DP) \cite{dp1973} and Visvalingam-Whyatt (VW) \cite{vw1992}.
 
 \subsection{Background and Problem Setting}
 This report is designed to be self-contained for readers with basic mathematical and programming background. The key concepts used throughout are:
@@ -93,7 +93,7 @@ The synthetic Gaussian edge-case curve is handled separately as a control exampl
 \vspace{0.5em}
 \begin{tabular}{lccccc}
 \toprule
-\textbf{Category} & \textbf{Total} & \textbf{Small ($<500$)} & \textbf{Med (5k--20k)} & \textbf{Large ($>100$k)} & \textbf{Other} \\
+\textbf{Category} & \textbf{Total} & \textbf{Small ($<500$)} & \textbf{Medium (5k--20k)} & \textbf{Large ($>100$k)} & \textbf{Other} \\
 \midrule
 Mechanical & 141 & 122 & 12 & 2 & 5 \\
 Organic    & 59  & 0    & 23 & 1 & 35 \\
